@@ -1,10 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: sans-serif;
   background: #faf7f1;
   color: #252225;
+  font-family: Inter, sans-serif;
 }
 
 main {
-  padding: 60px;
+  min-height: 100vh;
+}
+
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 80px;
+  gap: 40px;
+}
+
+.left {
+  max-width: 600px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #5b5bd6;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(60px, 8vw, 110px);
+  line-height: 0.92;
+  letter-spacing: -0.06em;
+  margin: 20px 0;
+}
+
+.intro {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #5e5a57;
+  max-width: 500px;
+}
+
+button {
+  margin-top: 40px;
+  border: none;
+  border-radius: 999px;
+  padding: 16px 24px;
+  background: #252225;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.right {
+  position: relative;
+  height: 700px;
+}
+
+.blob {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+
+  background:
+    radial-gradient(circle at 20% 50%, rgba(213, 168, 85, 0.45), transparent 30%),
+    radial-gradient(circle at 45% 50%, rgba(229, 119, 86, 0.35), transparent 32%),
+    radial-gradient(circle at 68% 50%, rgba(142, 116, 204, 0.3), transparent 34%),
+    radial-gradient(circle at 88% 50%, rgba(79, 134, 198, 0.35), transparent 35%);
+}
+
+.labels {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: space-around;
+
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 40px;
+  }
+
+  .right {
+    height: 400px;
+  }
 }
