@@ -1341,3 +1341,30 @@ body {
     gap: 1rem;
   }
 }
+/* Positioniert die Zitat-Box exakt wie auf Folie 02 */
+.contract-thesis-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* Schiebt den Text nach links, lässt rechts frei */
+  margin-top: 6rem;                  /* Großer Abstand nach oben zur Überschrift */
+  width: 100%;
+}
+
+/* Überschreibt nur die nötigen Details für Folie 03 */
+.contract-thesis-text {
+  color: var(--text) !important;     /* Ändert die Farbe von Weiß auf dein Projekt-Anthrazit */
+  grid-column: 1 / 2;                /* Hält den Text auf der linken Seite */
+}
+
+/* Mobil-Anpassung für saubere Abstände */
+@media (max-width: 1024px) {
+  .contract-thesis-container {
+    grid-template-columns: 1fr;
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contract-thesis-container {
+    margin-top: 2.5rem;
+  }
+}
